@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="enable_notifications"
+        android:summary="Get notifications every morning with Horoscope for the day."
+        android:title="Enable Notifications" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:dependency="enable_notifications"
+        android:key="enable_vibrations"
+        android:title="@string/pref_title_vibrate" />
+</PreferenceScreen>

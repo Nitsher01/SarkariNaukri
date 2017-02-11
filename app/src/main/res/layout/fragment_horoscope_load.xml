@@ -1,0 +1,60 @@
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="15dp">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            tools:context="com.alchemistcorp.myhoroscope.Fragments.HoroscopeLoadFragment">
+            <!-- TODO: Update blank fragment layout -->
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/horoscopeImage"
+                android:layout_width="240dp"
+                android:layout_height="240dp"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:id="@+id/horoscopeTitle"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="34dp"
+                android:textColor="#F8BBD0"
+                android:padding="7dp"
+                android:text="Sagi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:id="@+id/date"
+                android:textColor="@color/colorPrimaryLight"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="28dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.4"
+                android:textColor="@color/colorTextOrIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/horoscope"
+                android:text="@string/hello_blank_fragment" />
+        </LinearLayout>
+    </ScrollView>
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

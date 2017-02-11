@@ -9,4 +9,7 @@
 /Screenshots
 *.jks
 /*.jks
+.idea
+build
+gradle
 
