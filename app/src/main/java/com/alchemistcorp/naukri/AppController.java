@@ -1,18 +1,12 @@
-package com.alchemistcorp.myhoroscope;
+package com.alchemistcorp.naukri;
 
-import android.app.AlarmManager;
 import android.app.Application;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.text.TextUtils;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-
-import java.util.Calendar;
 
 /**
  * Created by Ali on 1/27/2016.
@@ -30,7 +24,7 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-        FontsOverride.setDefaultFont(this, "MONOSPACE", "font.ttf");
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "Raleway-Regular.ttf");
         Utility.scheduleAlarm(getApplicationContext());
     }
 

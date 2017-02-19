@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope.Fragments;
+package com.alchemistcorp.naukri.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,19 +6,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.widget.TextView;
-import android.widget.Toast;
-import java.lang.reflect.Field;
-import com.alchemistcorp.myhoroscope.R;
-import com.labo.kaji.fragmentanimations.FlipAnimation;
+
+import com.alchemistcorp.naukri.R;
 import com.labo.kaji.fragmentanimations.MoveAnimation;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

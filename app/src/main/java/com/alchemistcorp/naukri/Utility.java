@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope;
+package com.alchemistcorp.naukri;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -18,7 +17,7 @@ public class Utility {
 
     public static void setFont(TextView tv,AssetManager assets){
         Typeface face = Typeface.createFromAsset(assets,
-                "font.ttf");
+                "Raleway-Regular.ttf");
         tv.setTypeface(face);
     }
 

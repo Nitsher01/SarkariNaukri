@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope.Activity;
+package com.alchemistcorp.naukri.Activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

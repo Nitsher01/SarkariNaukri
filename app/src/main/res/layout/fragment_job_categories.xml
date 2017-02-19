@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="100"
+        android:padding="10dp">
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:padding="5dp"
+         android:layout_margin="5dp"
+         android:orientation="vertical"
+         android:gravity="center"
+         android:layout_weight="48"
+         android:background="@drawable/layout_bg">
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" android:src="@drawable/airforce" android:layout_weight="48"
+             android:elevation="10dp"
+             android:clickable="true"
+             android:padding="10dp"
+             android:id="@+id/ivAirForceJobs"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="AIR FORCE JOBS"
+             />
+     </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="48" android:background="@drawable/layout_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/army" android:layout_weight="48"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:clickable="true"
+                android:id="@+id/ivArmyJobs"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARMY JOBS"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" android:weightSum="100">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="48"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/bank"
+                android:layout_weight="48"
+                android:elevation="10dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:id="@+id/ivBankJobs"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BANK JOBS"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="48"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/railway" android:layout_weight="48"
+                android:elevation="10dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:id="@+id/ivRailwayJobs"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RAILWAY JOBS"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal" android:weightSum="100">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="48"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/teaching" android:layout_weight="48"
+                android:elevation="10dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:id="@+id/ivTeachingJobs"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEACHING JOBS"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="48"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:src="@drawable/airforce" android:layout_weight="48"
+                android:elevation="10dp"
+                android:clickable="true"
+                android:id="@+id/ivUPSCJobs"
+                android:padding="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPSC JOBS"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

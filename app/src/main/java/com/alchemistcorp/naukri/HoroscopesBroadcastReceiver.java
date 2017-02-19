@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope;
+package com.alchemistcorp.naukri;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,12 +10,8 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
-import android.widget.Toast;
 
-import com.alchemistcorp.myhoroscope.Activity.MainActivity;
-
-import java.util.Date;
+import com.alchemistcorp.naukri.Activity.MainActivity;
 
 public class HoroscopesBroadcastReceiver extends BroadcastReceiver {
     public HoroscopesBroadcastReceiver() {
@@ -39,8 +35,8 @@ public class HoroscopesBroadcastReceiver extends BroadcastReceiver {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context)
                         .setSmallIcon(R.drawable.aquarius)
-                        .setContentTitle("Daily Horoscope")
-                        .setContentText("Your Daily Horoscope!! Tap to view...")
+                        .setContentTitle("Sarkari Naurki")
+                        .setContentText("Check new government jobs!! Tap to view...")
                         .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
                 .setColor(Color.parseColor("#512DA8"));

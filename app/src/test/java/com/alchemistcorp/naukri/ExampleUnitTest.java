@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope;
+package com.alchemistcorp.naukri;
 
 import org.junit.Test;
 

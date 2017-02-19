@@ -1,15 +1,13 @@
-package com.alchemistcorp.myhoroscope.Activity;
+package com.alchemistcorp.naukri.Activity;
 
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.ActionBar;
-import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
-import android.widget.Toast;
 
-import com.alchemistcorp.myhoroscope.R;
+import com.alchemistcorp.naukri.R;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

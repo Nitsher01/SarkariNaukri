@@ -1,11 +1,14 @@
-package com.alchemistcorp.myhoroscope.Activity;
+package com.alchemistcorp.naukri.Activity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
@@ -13,24 +16,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.SpannableString;
-import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-import com.alchemistcorp.myhoroscope.Fragments.ListZodiacsFragment;
-import com.alchemistcorp.myhoroscope.Fragments.SplashScreenFragment;
-import com.alchemistcorp.myhoroscope.R;
-import com.alchemistcorp.myhoroscope.Utility;
+import com.alchemistcorp.naukri.Fragments.JobsHomeFragment;
+import com.alchemistcorp.naukri.Fragments.ListZodiacsFragment;
+import com.alchemistcorp.naukri.Fragments.SplashScreenFragment;
+import com.alchemistcorp.naukri.R;
+import com.alchemistcorp.naukri.Utility;
 import com.startapp.android.publish.StartAppSDK;
 
 import java.lang.reflect.Field;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-
+    MainActivity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setShowHideAnimationEnabled(true);
         int day = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("date",-1);
         Fragment fragmentToLoad = null;
-        if(Calendar.getInstance().get(Calendar.DAY_OF_YEAR) == day)
-            fragmentToLoad = new ListZodiacsFragment();
-        else
+        if(isNetworkAvailable())
+            fragmentToLoad = new SplashScreenFragment();
+        else if (Calendar.getInstance().get(Calendar.DAY_OF_YEAR) == day || !isNetworkAvailable())
             fragmentToLoad = new SplashScreenFragment();
         getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
             @Override
@@ -63,9 +65,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             Field f = toolbar.getClass().getDeclaredField("mTitleTextView");
             f.setAccessible(true);
-            Utility.setFont((TextView) f.get(toolbar),getAssets());
+            //Utility.setFont((TextView) f.get(toolbar),getAssets());
         } catch (NoSuchFieldException e) {
-        } catch (IllegalAccessException e) {
         }
 
 
@@ -147,5 +148,16 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
 
+    }
+    public boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    @Override
+    public void onAttachFragment(android.app.Fragment fragment) {
+        super.onAttachFragment(fragment);
     }
 }

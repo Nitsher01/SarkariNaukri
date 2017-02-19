@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope.Fragments;
+package com.alchemistcorp.naukri.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,8 +18,8 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alchemistcorp.myhoroscope.R;
-import com.alchemistcorp.myhoroscope.Utility;
+import com.alchemistcorp.naukri.R;
+import com.alchemistcorp.naukri.Utility;
 import com.labo.kaji.fragmentanimations.FlipAnimation;
 import com.labo.kaji.fragmentanimations.MoveAnimation;
 
@@ -65,9 +66,11 @@ public class HoroscopeLoadFragment extends Fragment {
         View view  = inflater.inflate(R.layout.fragment_horoscope_load, container, false);
         ButterKnife.bind(this,view);
         int zodiac = getArguments().getInt("zodiac",-1)-1;
-        Utility.setFont(textView,getActivity().getAssets());
+        //Utility.setFont(textView,getActivity().getAssets());
         try {
             String raw_data = horoscopeArray.getJSONObject(zodiac).getString("description");
+            System.out.println("Raw data "+horoscopeArray.toString());
+            Log.d("horoscopeArray ",horoscopeArray.toString());
             int index = raw_data.indexOf("More horoscopes!");
             raw_data  = index>=0 ? raw_data.substring(0,index) : raw_data;
             textView.setText(Html.fromHtml(raw_data));
@@ -103,9 +106,10 @@ public class HoroscopeLoadFragment extends Fragment {
         JSONObject horoscopeData;
         try {
             horoscopeData = XML.toJSONObject(horoscope);
-            horoscopeData = horoscopeData.getJSONObject("rss");
-            horoscopeData = horoscopeData.getJSONObject("channel");
-            horoscopeArray = horoscopeData.getJSONArray("item");
+            //horoscopeData = horoscopeData.getJSONObject("rss");
+            horoscopeData = horoscopeData.getJSONObject("result");
+            horoscopeArray = horoscopeData.getJSONArray("data");
+            Log.d("horoscopeArray ",horoscopeArray.toString());
         }catch(JSONException e){
             e.printStackTrace();
         }

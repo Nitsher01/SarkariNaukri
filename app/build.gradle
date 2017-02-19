@@ -5,7 +5,7 @@ android {
     buildToolsVersion '23.0.1'
 
     defaultConfig {
-        applicationId "com.alchemistcorp.myhoroscope"
+        applicationId "com.alchemistcorp.naukri"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 3
@@ -33,4 +33,5 @@ dependencies {
     compile 'com.android.support:support-v4:23.3.0'
     compile 'com.github.jlmd:AnimatedCircleLoadingView:1.1.5@aar'
     compile 'com.labo.kaji:fragmentanimations:0.1.0'
+    compile 'com.twotoasters.jazzylistview:library:1.2.1'
 }

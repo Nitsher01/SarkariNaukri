@@ -1,4 +1,4 @@
-package com.alchemistcorp.myhoroscope;
+package com.alchemistcorp.naukri;
 
 /**
  * Created by Ali on 5/28/2016.
